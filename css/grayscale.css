@@ -90,7 +90,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35rem;
+  min-height: 25rem;
   padding: 15rem 0;
   /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");*/
   /*background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");*/
@@ -102,7 +102,7 @@
 
 .masthead h1 {
   font-family: 'Montserrat bold';
-  font-size: 2.5rem;
+  font-size: 10rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
@@ -121,7 +121,7 @@
 
 @media (min-width: 768px) {
   .masthead h1 {
-    font-size: 4rem;
+    font-size: 10rem;
     line-height: 4rem;
   }
 }
@@ -178,14 +178,6 @@
 
 .about-section p {
   margin-bottom: 5rem;
-}
-
-
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
 }
 
 
