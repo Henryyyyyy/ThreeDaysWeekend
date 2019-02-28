@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // Activate Carousel
-  $("#myCarousel").carousel();
-    
+  $("#myCarousel").carousel({interval: false});
+  
   // Enable Carousel Indicators
   $(".item1").click(function(){
     $("#myCarousel").carousel(0);
