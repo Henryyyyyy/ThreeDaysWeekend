@@ -6,7 +6,6 @@
 <head>
 
   <title>The Three Day Weekend</title>
-  <link rel="stylesheet" href="prefstyle.css" />
 
   <!-- add react -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -34,6 +33,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="prefstyle.css" />
 </head>
 
 <body>
@@ -45,12 +45,9 @@
       <div class="navbar-header">
 
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
-
         </button>
 
-        <a class="navbar-brand" href="index.html"><img src="/img/LogoWhite.png" alt="Logo">
-
-        </a>
+        <a class="navbar-brand" href="index.html">Three Day Weekend</a>
 
       </div>
 
@@ -59,32 +56,21 @@
 </nav>
 
 
-
+<div id="myCarousel" class="carouselslide">
 <div class="container-fluid text-center">    
-
   <div class="row content">
-
-    <div class="col-sm-12"> 
-
+    <div class="col-sm-12 row align-items-center"> 
       <div class="container">
-
-  <div id="myCarousel" class="carouselslide">
-
-    <!-- Wrapper for slides -->
-
-    <div class="carousel-inner" role="listbox">
-    
-      <div class="item active">
-    
-        <h3>Click Right to Start Buildling</h3>
-    
-      </div>
-
-      <div class="item">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <h3>Click Right to Start Buildling</h3>
+            </div>
+            <div class="item">
         <h3>Gender</h3>
         <button type="button" class="btn btn-info">Male</button>
         <button type="button" class="btn btn-info">Female</button>
-        <button type="button" class="btn btn-info">Others</button>
+        <button type="button" class="btn btn-info">Other</button>
       </div>
 
       <div class="item">
@@ -99,7 +85,7 @@
       </div>
 
       <div class="item">
-          <h3>Who Is Traveling?</h3>
+          <h3>Who Are You Traveling With?</h3>
           <button type="button" class="btn btn-info">Solo</button>
           <button type="button" class="btn btn-info">Significant Other</button>
           <button type="button" class="btn btn-info">Friend</button>
