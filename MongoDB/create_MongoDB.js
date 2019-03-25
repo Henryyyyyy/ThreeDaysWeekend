@@ -35,6 +35,7 @@ var COLLECTION = "Indianapolis"
 //     });
 // });
 
+
 //Insert documents
 MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
