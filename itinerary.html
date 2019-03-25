@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+  #div1 {
+    width: 336px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+  </style>
+  <script>
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
+</head>
+<body>
+
+<center><h3>Choose your ideal hotel:</h3></center>
+<br><br>
+
+<center><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div></center>
+<br><br><br>
+<center><img id="drag1" src="https://media-cdn.tripadvisor.com/media/photo-s/01/c4/7c/8a/holiday-inn-express-hotel.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300">
+<img id="drag1" src="https://i.dailymail.co.uk/i/pix/2013/06/18/article-2343732-1A6088D7000005DC-100_964x753.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300">
+<img id="drag1" src="https://images0.kenwoodtravel.co.uk/thumbs/798x464/images/properties/3045/Taj-Dubai-Luxury-City-View-Room.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300"></center>
+
+
+</body>
+</html>
+
