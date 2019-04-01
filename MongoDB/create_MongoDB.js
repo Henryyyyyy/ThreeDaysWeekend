@@ -24,16 +24,17 @@ var COLLECTION = "Indianapolis"
 // });
 
 //Insert document
-// MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
-//     if (err) throw err;
-//     var dbo = db.db("mydb");
-//     var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
-//     dbo.collection("Users").insertOne(myobj, function (err, res) {
-//         if (err) throw err;
-//         console.log("1 document inserted");
-//         db.close();
-//     });
-// });
+MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("mydb");
+    var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
+    dbo.collection("Users").insertOne(myobj, function (err, res) {
+        if (err) throw err;
+        console.log("1 document inserted");
+        db.close();
+    });
+});
+
 
 //Insert documents
 MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
