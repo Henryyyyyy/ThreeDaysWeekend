@@ -1,0 +1,21 @@
+.navbar {
+  min-height: 80px;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #33508a;
+}
+.navbar-default {
+  background-color: #33508a;
+}
+.navbar-brand {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Bold';
+  font-size: 200%;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+h1 {
+  font-family: "Montserrat", serif;
+}
+

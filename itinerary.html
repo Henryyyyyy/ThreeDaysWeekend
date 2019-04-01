@@ -1,40 +1,209 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <title>The 3 Day Weekend Itinerary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="itinerarystyle" href="itinerarystyle.css">
+  <link rel="stylesheet" href="itinerarybootstrap.css"
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
-  #div1 {
-    width: 336px;
-    height: 300px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-  }
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      backgroud-color: #33508a
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+
+        /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #33508a;
+      padding: 25px;
+    }
+
+    .leftpad {
+      padding-left: 80px;
+    }
+
   </style>
-  <script>
-  function allowDrop(ev) {
-    ev.preventDefault();
-  }
-
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
-  </script>
 </head>
 <body>
 
-<center><h3>Choose your ideal hotel:</h3></center>
-<br><br>
+<nav class="navbar navbar-inverse"> 
+<nav color= #33508a>
+<center><h1><font color= "white">The 3 Day Weekend </font></h1></center>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" img src="img/LogoWhite.jpg" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      </ul>
+    </div>
+  </div>
+  </nav>
+</nav>
 
-<center><div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div></center>
-<br><br><br>
-<center><img id="drag1" src="https://media-cdn.tripadvisor.com/media/photo-s/01/c4/7c/8a/holiday-inn-express-hotel.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300">
-<img id="drag1" src="https://i.dailymail.co.uk/i/pix/2013/06/18/article-2343732-1A6088D7000005DC-100_964x753.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300">
-<img id="drag1" src="https://images0.kenwoodtravel.co.uk/thumbs/798x464/images/properties/3045/Taj-Dubai-Luxury-City-View-Room.jpg" draggable="true" ondragstart="drag(event)" width="336" height="300"></center>
+<h1 class = "leftpad"> Where to Stay? </h1> <br>
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <center><h1> Day 1 </h1></center> <br>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Breakfast</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <center><h1> Day 2 </h1></center> <br>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Breakfast</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <center><h1> Day 3 </h1></center> <br>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Breakfast</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Morning</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Morning</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Morning</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Lunch</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Lunch</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Lunch</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+  </div><br>
+
+  <div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Afternoon</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Afternoon</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Afternoon</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  <br>
+
+  <div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Dinner</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Dinner</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Dinner</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container"><font color="white">
+      Copyright &copy; The Three Day Weekend 2019
+      </font>
+    </div>
+  </footer>
 
 
 </body>
