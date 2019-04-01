@@ -6,34 +6,34 @@ var url = "mongodb://localhost:27017/mydb";
 var DATABASE = "restaurants"
 var COLLECTION = "Indianapolis"
 //Create database
-MongoClient.connect(url, function (err, db) {
-    if (err) throw err;
-    console.log("Database created!");
-    db.close();
-});
+// MongoClient.connect(url, function (err, db) {
+//     if (err) throw err;
+//     console.log("Database created!");
+//     db.close();
+// });
 
 //Create collection
-MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
-    if (err) throw err;
-    var dbo = db.db("restaurants");
-    dbo.createCollection("Indianapolis", function (err, res) {
-        if (err) throw err;
-        console.log("Collection created!");
-        db.close();
-    });
-});
-
-//Insert document
 // MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
 //     if (err) throw err;
-//     var dbo = db.db("mydb");
-//     var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
-//     dbo.collection("Users").insertOne(myobj, function (err, res) {
+//     var dbo = db.db("restaurants");
+//     dbo.createCollection("Indianapolis", function (err, res) {
 //         if (err) throw err;
-//         console.log("1 document inserted");
+//         console.log("Collection created!");
 //         db.close();
 //     });
 // });
+
+//Insert document
+MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("mydb");
+    var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
+    dbo.collection("Users").insertOne(myobj, function (err, res) {
+        if (err) throw err;
+        console.log("1 document inserted");
+        db.close();
+    });
+});
 
 
 //Insert documents

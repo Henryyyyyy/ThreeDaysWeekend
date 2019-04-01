@@ -249,7 +249,7 @@
 }
 
 body {
-  font-family: 'Nunito';
+  font-family: 'Montserrat';
   letter-spacing: 0.0625em;
 }
 
@@ -276,4 +276,10 @@ a:focus, a:hover {
 
 footer {
   padding: 5rem 0;
+}
+
+.logopad {
+  padding-top: 10px;
+  padding-left: 10px;
+
 }
