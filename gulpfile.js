@@ -28,7 +28,6 @@ const banner = ['/*!\n',
 // BrowserSync
 function browserSync(done) {
   browsersync.init({
-    open: false,
     server: {
       baseDir: "./"
     },
