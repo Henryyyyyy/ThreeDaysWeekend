@@ -90,7 +90,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 25rem;
+  min-height: 35rem;
   padding: 15rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
@@ -101,17 +101,13 @@
 }
 
 .masthead h1 {
-  font-family: 'Montserrat bold';
-  font-size: 10rem;
+  font-family: 'Varela Round';
+  font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-
-.brutefont {
-  font-family: "Montserrat", bold;
 }
 
 .masthead h2 {
@@ -121,7 +117,7 @@
 
 @media (min-width: 768px) {
   .masthead h1 {
-    font-size: 10rem;
+    font-size: 4rem;
     line-height: 4rem;
   }
 }
@@ -171,16 +167,45 @@
 }
 
 .about-section {
-  padding-top: 30rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)), url("../img/ipad.jpg");
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%), url("../img/ipad.jpg");
-
+  padding-top: 10rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
 .about-section p {
   margin-bottom: 5rem;
 }
 
+.projects-section {
+  padding: 10rem 0;
+}
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+}
+
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .projects-section .project-text {
+    padding: 5rem;
+  }
+  .projects-section .project-text hr {
+    border-color: #64a19d;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
 
 .signup-section {
   padding: 10rem 0;
@@ -197,7 +222,7 @@
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
-  font-family: Montserrat;
+  font-family: 'Varela Round';
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -215,7 +240,7 @@
 
 .contact-section .card h4 {
   font-size: 0.8rem;
-  font-family: Montserrat;
+  font-family: 'Varela Round';
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
