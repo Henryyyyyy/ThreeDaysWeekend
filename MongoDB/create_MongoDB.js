@@ -24,27 +24,41 @@ var COLLECTION = "Indianapolis"
 // });
 
 //Insert document
-MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
-    if (err) throw err;
-    var dbo = db.db("mydb");
-    var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
-    dbo.collection("Users").insertOne(myobj, function (err, res) {
-        if (err) throw err;
-        console.log("1 document inserted");
-        db.close();
-    });
-});
+// MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
+//     if (err) throw err;
+//     var dbo = db.db("mydb");
+//     var myobj = { username: "yo", first_name: "Henry", last_name: "Yu", gender: "male"};
+//     dbo.collection("Users").insertOne(myobj, function (err, res) {
+//         if (err) throw err;
+//         console.log("1 document inserted");
+//         db.close();
+//     });
+// });
 
 
-//Insert documents
+// //Insert documents
+// MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
+//     if (err) throw err;
+//     var dbo = db.db(DATABASE);
+//     var myobj = [
+//         {name: "Patachou", district: "Downtown", meals: ["breakfast", "lunch"], budget: "$$", styles: ["laid back", "casual", "trendy", "foodie"], audience: ["couple", "family", "group", "solo"]},
+//         {name: "Bluebeard", district: "Fountain Square", meals: ["dinner", "lunch"], budget: "$$", styles: ["trendy", "foodie", "popular bar"], 
+//             features: ["great wine", "award-winning chef", "impressive cocktails", "craft beer"], audience: ["couple", "family", "group", "solo"] }
+//     ];
+//     dbo.collection(COLLECTION).insertMany(myobj, function (err, res) {
+//         if (err) throw err;
+//         console.log("Number of documents inserted: " + res.insertedCount);
+//         console.log(res)
+//         db.close();
+//     });
+// });
+
 MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     var dbo = db.db(DATABASE);
     var myobj = [
-        {name: "Patachou", district: "Downtown", meals: ["breakfast", "lunch"], budget: "$$", styles: ["laid back", "casual", "trendy", "foodie"], audience: ["couple", "family", "group", "solo"]},
-        { name: "Bluebeard", district: "Fountain Square", meals: ["dinner", "lunch"], budget: "$$", styles: ["trendy", "foodie", "popular bar"], 
-            features: ["great wine", "award-winning chef", "impressive cocktails", "craft beer"], audience: ["couple", "family", "group", "solo"] }
-    ];
+        //{name: "Patachou", district: "Downtown", meals: ["breakfast", "lunch"], budget: "$$", styles: ["laid back", "casual", "trendy", "foodie"], audience: ["couple", "family", "group", "solo"]},
+        ];
     dbo.collection(COLLECTION).insertMany(myobj, function (err, res) {
         if (err) throw err;
         console.log("Number of documents inserted: " + res.insertedCount);
