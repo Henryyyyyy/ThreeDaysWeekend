@@ -12,7 +12,7 @@ module.exports = {
     InsertRestaurant,
     DeleteUser,
     UpdateUserFirstName
-}
+} 
 
 function InsertRestaurant(DbName, ColName, DocName){
     MongoClient.connect(URL, function(err, db) {
