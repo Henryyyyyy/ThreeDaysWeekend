@@ -1,4 +1,3 @@
-
 class itinerary{
     constructor(){
         this.city = null
