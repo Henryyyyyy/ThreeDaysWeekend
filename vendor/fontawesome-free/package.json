@@ -2,7 +2,11 @@
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.7.2",
+<<<<<<< HEAD
+      "/Users/nicolamorris/Documents/Duke/Year3/ThreeDaysWeekend"
+=======
       "/Users/henry_yu/Desktop/ThreeDaysWeekend"
+>>>>>>> c8c334a94615df63b3e92ea6ddc13b54abf8bbda
     ]
   ],
   "_from": "@fortawesome/fontawesome-free@5.7.2",
@@ -27,7 +31,11 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.2.tgz",
   "_spec": "5.7.2",
+<<<<<<< HEAD
+  "_where": "/Users/nicolamorris/Documents/Duke/Year3/ThreeDaysWeekend",
+=======
   "_where": "/Users/henry_yu/Desktop/ThreeDaysWeekend",
+>>>>>>> c8c334a94615df63b3e92ea6ddc13b54abf8bbda
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
