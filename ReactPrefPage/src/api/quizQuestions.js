@@ -88,7 +88,7 @@ var quizQuestions = [
           },
           {
               type: "Nintendo",
-              content: "Day Drinking/ Breweries"
+              content: "Breweries"
           },
           {
               type: "Sony",
@@ -129,7 +129,7 @@ var quizQuestions = [
       answers: [
           {
               type: "Microsoft",
-              content: "Laid Back/ Casual"
+              content: "Casual"
           },
           {
               type: "Nintendo",
@@ -137,7 +137,7 @@ var quizQuestions = [
           },
           {
               type: "Sony",
-              content: "Trendy/ Foodie Favorites"
+              content: "Trendy"
           },
           {
               type: "Nintendo",
@@ -145,7 +145,7 @@ var quizQuestions = [
           },
           {
               type: "Sony",
-              content: "Quiet/ Intimate"
+              content: "Quiet"
           },
           {
               type: "Sony",
@@ -191,15 +191,15 @@ var quizQuestions = [
       answers: [
           {
               type: "Microsoft",
-              content: "Ice Cream/ Dessert"
+              content: "Dessert"
           },
           {
               type: "Nintendo",
-              content: "Cocktail Bars/ Speakeasies"
+              content: "Cocktail Bars"
           },
           {
               type: "Sony",
-              content: "Beer Bars/ Breweries"
+              content: "Breweries"
           },
           {
               type: "Sony",
