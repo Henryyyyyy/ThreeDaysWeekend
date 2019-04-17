@@ -2,90 +2,51 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { withStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-
-const CustomTableCell = withStyles(theme => ({
-  head: {
-    backgroundColor: theme.palette.common.blue,
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
-  },
-}))(TableCell);
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import IconButton from '@material-ui/core/IconButton';
+import tileData from './tileData';
 
 const styles = theme => ({
   root: {
-    width: '100%',
-    marginTop: theme.spacing.unit * 3,
-    overflowX: 'auto',
+    flexGrow: 1,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
   },
-  table: {
-    minWidth: 700,
-  },
-  row: {
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.background.default,
-    },
+  paper: {
+    padding: theme.spacing.unit * 3,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
 });
 
-let id = 0;
-function createData(name, first, second, third ) {
-  id += 1;
-  return { name, first, second, third };
-}
-
-const rows = [
-  createData('Breakfast', 159, 6.0, 24),
-  createData('Morning', 237, 9.0, 37),
-  createData('Lunch', 262, 16.0, 24),
-  createData('Afternoon', 305, 3.7, 67),
-  createData('Dinner', 356, 16.0, 49),
-];
-
-function CustomizedTable(props) {
+function TitlebarGridList(props) {
   const { classes } = props;
 
   return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <CustomTableCell>Dessert (100g serving)</CustomTableCell>
-            <CustomTableCell align="right">First</CustomTableCell>
-            <CustomTableCell align="right">Second</CustomTableCell>
-            <CustomTableCell align="right">Third</CustomTableCell>
-            
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(row => (
-            <TableRow className={classes.row} key={row.id}>
-              <CustomTableCell component="th" scope="row">
-                {row.name}
-              </CustomTableCell>
-              <CustomTableCell align="right">{row.first}</CustomTableCell>
-              <CustomTableCell align="right">{row.second}</CustomTableCell>
-              <CustomTableCell align="right">{row.third}</CustomTableCell>
-              
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
+    <div className={classes.root}>
+      <GridList cellHeight={180} className={classes.gridList}>
+        <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
+          <ListSubheader component="div" >Your Three Day Itinerary</ListSubheader>
+        </GridListTile>
+        {tileData.map(tile => (
+          <GridListTile key={tile.img}>
+            <img src={tile.img} alt={tile.title} />
+            <GridListTileBar
+              title={tile.title}
+            />
+          </GridListTile>
+        ))}
+      </GridList>
+    </div>
   );
 }
 
-CustomizedTable.propTypes = {
+TitlebarGridList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CustomizedTable);
-
-
+export default withStyles(styles)(TitlebarGridList);
