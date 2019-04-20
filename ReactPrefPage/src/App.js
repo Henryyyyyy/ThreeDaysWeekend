@@ -14,19 +14,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
+      counter: 0, //where in the quiz
       questionId: 1,
       question: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
+      
+      answersCount: { //used to calculate final result
         Nintendo: 0,
         Microsoft: 0,
         Sony: 0
       },
       result: ''
     };
-
+    //bind the event handler
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
@@ -62,15 +63,22 @@ class App extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
+    console.log(event)
+    console.log(event.currentTarget)
+    console.log(event.currentTarget.value)
 
+    //go to next question
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
+      //quiz has ended
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
 
+  //helper of handleAnserSelected
   setUserAnswer(answer) {
+    console.log(answer)
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
@@ -102,6 +110,7 @@ class App extends Component {
     return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
   }
 
+  //end of quiz. result is fetched using getResult() func
   setResults(result) {
     if (result.length === 1) {
       this.setState({ result: result[0] });
@@ -110,14 +119,16 @@ class App extends Component {
     }
   }
 
+  //initiate the quiz when first boosted
   renderQuiz() {
     return (
+      //this is the Quiz object in react component
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
-        questionTotal={quizQuestions.length}
+        questionTotal={quizQuestions.length} //quizQuestion is the big jason string
         onAnswerSelected={this.handleAnswerSelected}
       />
     );
