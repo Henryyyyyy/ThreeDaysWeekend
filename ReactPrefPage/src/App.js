@@ -14,6 +14,7 @@ import home from "./home.svg";
 
 class App extends Component {
 
+
   render() {
     return (
     <div className="App">
@@ -67,6 +68,7 @@ class App extends Component {
             <input type="email" className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address..."/>
             <button type="submit" className="btn btn-primary mx-auto">Subscribe</button>
           </form>
+
 
         </div>
       </div>
