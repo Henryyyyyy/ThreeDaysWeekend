@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
+import Preferences from './components/Preferences';
 import logo from './logo.png';
 import logoWhite from './LogoWhite.png';
 import './App.css';
 import user from "./user.svg";
 import home from "./home.svg";
+
 
 
 class App extends Component {
@@ -50,7 +52,8 @@ class App extends Component {
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
        
         <Router>
-        <Link to={"/preferences"}> Build a personal itinerary</Link>
+        <Link to={'./preferences'} className="nav-link">Build a personal itinerary</Link>
+        
         </Router>
       </div>
     </div>

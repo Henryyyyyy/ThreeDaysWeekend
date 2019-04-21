@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import Button from 'react-bootstrap/Button';
-import quizQuestions from './api/quizQuestions';
-import Quiz from './components/Quiz';
-import Result from './components/Result';
-import logo from './logo.png';
-import './App.css';
-import user from "./user.svg"
-import home from "./home.svg"
+import quizQuestions from '../api/quizQuestions';
+import Quiz from './Quiz';
+import Result from './Result';
+import logo from '../logo.png';
+//import './App.css';
+import user from "../user.svg"
+import home from "../home.svg"
 
 
 class Preferences extends Component {
