@@ -10,7 +10,7 @@ import home from "./home.svg"
 
 
 class App extends Component {
-  DEBUG = true;
+  
   constructor(props) {
     super(props);
 
@@ -21,17 +21,15 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       
-      answersCount: { //used to calculate final result
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
+      answersCount: [],
       result: ''
     };
     //bind the event handler
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
+  DEBUG = true;
+  
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map(question =>
       this.shuffleArray(question.answers)
@@ -62,6 +60,7 @@ class App extends Component {
     return array;
   }
 
+  //setting the answer and then setting the next question
   handleAnswerSelected(event) {
     
     //logic for choosing an answer
@@ -82,13 +81,11 @@ class App extends Component {
   //helper of handleAnserSelected
   setUserAnswer(answer) {
     console.log(answer)
-    this.setState((state, props) => ({
-      answersCount: {
-        ...state.answersCount,
-        [answer]: state.answersCount[answer] + 1
-      },
-      answer: answer
-    }));
+    this.state.answersCount.push(answer)
+    this.setState({
+      answersCount: this.state.answersCount,
+      answer: answer}
+    );
   }
 
   setNextQuestion() {
@@ -137,7 +134,7 @@ class App extends Component {
     );
   }
 
-  
+
   renderResult() {
     return <Result quizResult={this.state.result} />;
   }
