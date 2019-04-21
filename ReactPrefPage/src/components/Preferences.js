@@ -10,26 +10,25 @@ import home from "./home.svg"
 
 
 class Preferences extends Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
 
     this.state = {
-      counter: 0,
+      counter: 0, //where in the quiz
       questionId: 1,
       question: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
+      
+      answersCount: [],
       result: ''
     };
-
+    //bind the event handler
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
+  DEBUG = true;
+  
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map(question =>
       this.shuffleArray(question.answers)
@@ -60,48 +59,35 @@ class Preferences extends Component {
     return array;
   }
 
+  //setting the answer and then setting the next question
   handleAnswerSelected(event) {
+    
+    //logic for choosing an answer
     this.setUserAnswer(event.currentTarget.value);
+    console.log(event)
+    console.log(event.currentTarget)
+    console.log(event.currentTarget.value)
 
+    //go to next question
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
+      //quiz has ended
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
 
+  //helper of handleAnserSelected
   setUserAnswer(answer) {
-    this.setState((state, props) => ({
-      answersCount: {
-        ...state.answersCount,
-        [answer]: state.answersCount[answer] + 1
-      },
-      answer: answer
-    }));
-  }
-
-  setNextQuestion() {
-    const counter = this.state.counter + 1;
-    const questionId = this.state.questionId + 1;
-
+    console.log(answer)
+    this.state.answersCount.push(answer)
     this.setState({
-      counter: counter,
-      questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
-      answer: ''
-    });
+      answersCount: this.state.answersCount,
+      answer: answer}
+    );
   }
 
-  getResults() {
-    const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
-  }
-
+  //end of quiz. result is fetched using getResult() func
   setResults(result) {
     if (result.length === 1) {
       this.setState({ result: result[0] });
@@ -110,18 +96,21 @@ class Preferences extends Component {
     }
   }
 
+  //initiate the quiz when first boosted
   renderQuiz() {
     return (
+      //this is the Quiz object in react component
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
-        questionTotal={quizQuestions.length}
+        questionTotal={quizQuestions.length} //quizQuestion is the big jason string
         onAnswerSelected={this.handleAnswerSelected}
       />
     );
   }
+
 
   renderResult() {
     return <Result quizResult={this.state.result} />;
