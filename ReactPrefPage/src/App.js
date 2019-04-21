@@ -1,145 +1,87 @@
 import React, { Component } from 'react';
-// import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 import logo from './logo.png';
+import logoWhite from './LogoWhite.png';
 import './App.css';
-import user from "./user.svg"
-import home from "./home.svg"
+import user from "./user.svg";
+import home from "./home.svg";
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      counter: 0,
-      questionId: 1,
-      question: '',
-      answerOptions: [],
-      answer: '',
-      answersCount: {
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
-      result: ''
-    };
-
-    this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-  }
-
-  componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
-      this.shuffleArray(question.answers)
-    );
-    this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
-    });
-  }
-
-  shuffleArray(array) {
-    var currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  }
-
-  handleAnswerSelected(event) {
-    this.setUserAnswer(event.currentTarget.value);
-
-    if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
-    } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
-    }
-  }
-
-  setUserAnswer(answer) {
-    this.setState((state, props) => ({
-      answersCount: {
-        ...state.answersCount,
-        [answer]: state.answersCount[answer] + 1
-      },
-      answer: answer
-    }));
-  }
-
-  setNextQuestion() {
-    const counter = this.state.counter + 1;
-    const questionId = this.state.questionId + 1;
-
-    this.setState({
-      counter: counter,
-      questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
-      answer: ''
-    });
-  }
-
-  getResults() {
-    const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
-  }
-
-  setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0] });
-    } else {
-      this.setState({ result: 'Undetermined' });
-    }
-  }
-
-  renderQuiz() {
-    return (
-      <Quiz
-        answer={this.state.answer}
-        answerOptions={this.state.answerOptions}
-        questionId={this.state.questionId}
-        question={this.state.question}
-        questionTotal={quizQuestions.length}
-        onAnswerSelected={this.handleAnswerSelected}
-      />
-    );
-  }
-
-  renderResult() {
-    return <Result quizResult={this.state.result} />;
-  }
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <div className="App-header-logo">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Create Your Itinerary</h2>
-          </div>
+    <div className="App">
+      
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
+        <div className="container">
+          <a className="navbar-brand js-scroll-trigger" href="#page-top"></a>
+          <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i className="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item" className="brutefont">
+              <a className="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+  
+
+
+  <header className="masthead">
+    <div className="container d-flex h-100 align-items-center">
+      <div className="mx-auto text-center">
+        <h1 className="text-center">Three Day Weekend</h1>
+        <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
+       
+        <Router>
+        <Link to={"/preferences"}> Build a personal itinerary</Link>
+        </Router>
+      </div>
+    </div>
+  </header>
+
+  <section id="signup" className="signup-section">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i className="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 className="text-white mb-5">Subscribe to receive weekly itineraries!</h2>
+
+          <form className="form-inline d-flex">
+            <input type="email" className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address..."/>
+            <button type="submit" className="btn btn-primary mx-auto">Subscribe</button>
+          </form>
 
         </div>
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
-    );
+    </div>
+  </section>
+
+  <footer className="bg-black small text-center text-white-50">
+    <div className="container">
+      Copyright &copy; The Three Day Weekend 2019
+    </div>
+  </footer>
+
+
+
+      </div>);
   }
 }
 
