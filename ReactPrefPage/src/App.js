@@ -10,6 +10,7 @@ import home from "./home.svg"
 
 
 class App extends Component {
+  DEBUG = true;
   constructor(props) {
     super(props);
 
@@ -62,6 +63,8 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
+    
+    //logic for choosing an answer
     this.setUserAnswer(event.currentTarget.value);
     console.log(event)
     console.log(event.currentTarget)
