@@ -94,7 +94,7 @@ class Preferences extends Component {
       this.setState({ result: 'Undetermined' });
     }
   }
-  
+   
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
