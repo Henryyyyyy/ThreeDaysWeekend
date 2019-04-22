@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/scss/bootstrap.scss';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 import Preferences from './components/Preferences';
 import logo from './logo.png';
 import logoWhite from './LogoWhite.png';
@@ -16,8 +16,10 @@ class App extends Component {
 
   render() {
     return (
-    <div className="App">
       
+    
+    <div className="App" >
+      <body>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
         <div className="container">
@@ -48,20 +50,23 @@ class App extends Component {
         <h1 className="text-center">Three Day Weekend</h1>
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
        
-        <Router>
-        <div>
+        
+       
+        <BrowserRouter>
         <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
-        <Switch>
-              <Route exact path='/preferences' component={Preferences} />  
-        </Switch>
-        </div>
-        </Router>
+         <div >
+              <Route exact path='/' component={Preferences} />  
+              <Route path='/preferences' component={Preferences} />  
+        </div>
+        </BrowserRouter>
+        
+
       
       </div>
     </div>
   </header>
 
-  <section id="signup" className="signup-section">
+  {/* <section id="signup" className="signup-section">
     <div className="container">
       <div className="row">
         <div className="col-md-10 col-lg-8 mx-auto text-center">
@@ -78,7 +83,7 @@ class App extends Component {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
   <footer className="bg-black small text-center text-white-50">
     <div className="container">
@@ -87,8 +92,12 @@ class App extends Component {
   </footer>
 
 
-
-      </div>);
+  </body>
+      </div>
+      
+        
+    
+      );
   }
 }
 

@@ -86,6 +86,14 @@ class Preferences extends Component {
     );
   }
 
+  getResults() {
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+  }
+
   //end of quiz. result is fetched using getResult() func
   setResults(result) {
     if (result.length === 1) {
@@ -131,14 +139,15 @@ class Preferences extends Component {
 
   render() {
     return (
+     
       <div className="App">
-          <div>
-          <h2>Create Your Itinerary</h2>
-          </div>
-
+        <body>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        </body>
+        
       </div>
     );
+
   }
 }
 
