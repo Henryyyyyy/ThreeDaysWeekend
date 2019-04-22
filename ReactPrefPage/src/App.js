@@ -49,12 +49,13 @@ class App extends Component {
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
        
         <Router>
-        <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
-        <Switch>
-              <Route path='/preferences' component={Preferences} />  
-        </Switch>
-        </Router>
-        
+        <div>
+        <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
+        <Switch>
+              <Route exact path='/preferences' component={Preferences} />  
+        </Switch>
+        </div>
+        </Router>
       
       </div>
     </div>

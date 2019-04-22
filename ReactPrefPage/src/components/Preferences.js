@@ -94,6 +94,20 @@ class Preferences extends Component {
       this.setState({ result: 'Undetermined' });
     }
   }
+  
+  setNextQuestion() {
+    const counter = this.state.counter + 1;
+    const questionId = this.state.questionId + 1;
+
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
+      answer: ''
+    });
+  }
+
 
   //initiate the quiz when first boosted
   renderQuiz() {
@@ -118,13 +132,10 @@ class Preferences extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <div className="App-header-logo">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Create Your Itinerary</h2>
+          <div>
+          <h2>Create Your Itinerary</h2>
           </div>
 
-        </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );
