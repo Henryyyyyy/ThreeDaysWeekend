@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/scss/bootstrap.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
@@ -52,7 +53,7 @@ class App extends Component {
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
        
         <Router>
-        <Link to={'./preferences'} className="nav-link">Build a personal itinerary</Link>
+        <Link to={'Preferences'} className="nav-link">Build a personal itinerary</Link>
         
         </Router>
       </div>
