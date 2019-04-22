@@ -38,20 +38,14 @@ class App extends Component {
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
           </ul>
-        </div>
-        
+        </div>      
       </nav>
   
-
-
   <header className="masthead">
     <div className="container d-flex h-100 align-items-center">
       <div className="mx-auto text-center">
         <h1 className="text-center">Three Day Weekend</h1>
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
-       
-        
-       
         <BrowserRouter>
         <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
          <div >
