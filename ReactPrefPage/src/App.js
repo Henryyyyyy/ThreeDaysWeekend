@@ -49,7 +49,6 @@ class App extends Component {
         <BrowserRouter>
         <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
          <div >
-              <Route exact path='/' component={Preferences} />  
               <Route path='/preferences' component={Preferences} />  
         </div>
         </BrowserRouter>
