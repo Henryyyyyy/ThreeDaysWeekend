@@ -19,7 +19,7 @@ class App extends Component {
       
     
     <div className="App" >
-      <body>
+      <div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
         <div className="container">
@@ -37,21 +37,25 @@ class App extends Component {
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
+            <li className="nav-item" className="brutefont">
+              <BrowserRouter>
+              <Link to={'/preferences'}> Build a personal itinerary</Link>
+              </BrowserRouter>
+            </li>
           </ul>
         </div>      
       </nav>
-  
+      </div>
+
+   <div>   
   <header className="masthead">
     <div className="container d-flex h-100 align-items-center">
       <div className="mx-auto text-center">
         <h1 className="text-center">Three Day Weekend</h1>
         <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
         <BrowserRouter>
-        <Link to={'/preferences'} className="nav-link"> Build a personal itinerary</Link>
-         <div >
               <Route exact path='/' component={Preferences} />  
               <Route path='/preferences' component={Preferences} />  
-        </div>
         </BrowserRouter>
         
 
@@ -123,8 +127,9 @@ class App extends Component {
     </div>
   </footer>
 
-
-  </body>
+  
+  
+  </div>
       </div>
       
         
