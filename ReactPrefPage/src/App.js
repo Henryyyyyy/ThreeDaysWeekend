@@ -8,7 +8,7 @@ import logo from './logo.png';
 import logoWhite from './LogoWhite.png';
 import user from "./user.svg";
 import home from "./home.svg";
-
+import './App.css';
 
 
 class App extends Component {
@@ -77,7 +77,7 @@ class App extends Component {
         <div className = "row">
         <div className= "col-lg-4 mx-auto">
           <h3 className="text-white mb-4"> Where to Stay</h3>
-          <img src="img/hotel.jpg" class="img-fluid" alt=""/>
+          <img src='img/hotel.jpg' className='img-fluid' alt=""/>
 
           <p className="text-white-50">The highest ranked hotels that work best for your trip. Hotels selected for both location and quality.</p>
          
@@ -85,14 +85,14 @@ class App extends Component {
   
          <div className= "col-lg-4 mx-auto">
           <h3 className="text-white mb-4"> Eat and Drink</h3>
-          <img src="img/food.jpeg" class="img-fluid" alt=""/>
+          <img src='img/food.jpeg' className='img-fluid' alt=""/>
           <br></br>
           <p className="text-white-50">Handpicked restaurants and bars just for you. The best restaurants optimized for your location.</p>
         </div>
   
          <div className= "col-lg-4 mx-auto">
-          <h3 className="text-white mb-4"> Activities</h3>
-          <img src="img/activity.jpg" class="img-fluid" alt=""/>
+          <h3 className="text-white mb-4"> Activities </h3>
+          <img src="./img/activity.jpg" className="img-fluid" alt=""/>
           <br></br>
           <p className="text-white-50">Recommendations of the best things to do in a city provided by local experts</p>
         </div>
