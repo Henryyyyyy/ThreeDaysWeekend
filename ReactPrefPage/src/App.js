@@ -5,7 +5,7 @@ import 'bootstrap/scss/bootstrap.scss';
 import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 import Preferences from './components/Preferences';
 import logo from './logo.png';
-import logoWhite from './LogoWhite.png';
+import logoWhite from './img/LogoWhite.png';
 import user from "./user.svg";
 import home from "./home.svg";
 import './App.css';
@@ -19,7 +19,6 @@ class App extends Component {
       
     
     <div className="App" >
-      <div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
         <div className="container">
@@ -47,7 +46,8 @@ class App extends Component {
       </nav>
       </div>
 
-   <div>   
+
+   <div className="Content">   
   <header className="masthead">
     <div className="container d-flex h-100 align-items-center">
       <div className="mx-auto text-center">
@@ -130,7 +130,7 @@ class App extends Component {
   
   
   </div>
-      </div>
+      
       
         
     

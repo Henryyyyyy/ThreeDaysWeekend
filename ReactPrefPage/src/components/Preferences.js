@@ -18,7 +18,6 @@ class Preferences extends Component {
       question: '',
       answerOptions: [],
       answer: '',
-      
       answersCount: [],
       result: ''
     };
@@ -29,12 +28,14 @@ class Preferences extends Component {
   DEBUG = true;
   
   componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
+    //maps current question with answer options
+    const AnswerOptions = quizQuestions.map(question =>
       question.answers
     );
     this.setState({
+      //assigns the question ti the first question in the map, with the corresponding answer options
       question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      answerOptions: AnswerOptions[0]
     });
   }
 
@@ -84,6 +85,7 @@ class Preferences extends Component {
   }
    
   setNextQuestion() {
+    //increments counter and resets the state to the relevant information for the new question
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
 
