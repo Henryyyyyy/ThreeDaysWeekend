@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/scss/bootstrap.scss';
-import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
+import {Route, NavLink, HashRouter} from "react-router-dom";
+//import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 import Preferences from './components/Preferences';
+import Home from './components/Home';
 import logo from './logo.png';
 import logoWhite from './img/LogoWhite.png';
 import user from "./user.svg";
@@ -17,8 +19,8 @@ class App extends Component {
   render() {
     return (
       
-    
-    <div className="App" >
+    <HashRouter>
+    <div id = "home" className="App" >
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
         <div className="container">
@@ -31,24 +33,29 @@ class App extends Component {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item" className="brutefont">
+              {/* <a className="nav-link js-scroll-trigger" href="#home">Home</a> */}
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="nav-item" className="brutefont">
               <a className="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
             <li className="nav-item" className="brutefont">
-              <BrowserRouter>
-              <Link to={'/preferences'}> Build a personal itinerary</Link>
-              </BrowserRouter>
+              <NavLink to="/preferences">Build</NavLink>
+              {/*<Link to={'/preferences'}> Build a personal itinerary</Link> */}
             </li>
           </ul>
         </div>      
       </nav>
-      </div>
 
+  <div className="Content"> 
+  <Route exact path="/" component={Home}/>
+  <Route path="/preferences" component={Preferences}/>
+            
 
-   <div className="Content">   
-  <header className="masthead">
+  {/* <header className="masthead">
     <div className="container d-flex h-100 align-items-center">
       <div className="mx-auto text-center">
         <h1 className="text-center">Three Day Weekend</h1>
@@ -125,16 +132,14 @@ class App extends Component {
     <div className="container">
       Copyright &copy; The Three Day Weekend 2019
     </div>
-  </footer>
+  </footer> */}
 
   
   
   </div>
-      
-      
-        
-    
-      );
+  </div>
+  </HashRouter>
+    );
   }
 }
 
