@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import quizQuestions from '../api/quizQuestions';
 import Quiz from './Quiz';
 import Result from './Result';
+import './Pref.css';
 import logo from '../logo.png';
 import user from "../user.svg"
 import home from "../home.svg"

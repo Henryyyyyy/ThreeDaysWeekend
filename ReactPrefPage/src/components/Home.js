@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/scss/bootstrap.scss';
-//import './App.css';
+import food from './img/food.jpeg';
+import hotel from './img/hotel.jpg';
+import activity from './img/activity.jpg';
+//import './Home.css';
 
 class Home extends Component {
 
 
     render() {
       return (
-    
+    <div className="App">
+    <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item" className="brutefont">
+              <a className="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
+            </li>
+          </ul>
+        </div>      
     <div className="Content">   
     <header className="masthead">
       <div className="container d-flex h-100 align-items-center">
@@ -34,7 +47,7 @@ class Home extends Component {
           <div className = "row">
           <div className= "col-lg-4 mx-auto">
             <h3 className="text-white mb-4"> Where to Stay</h3>
-            <img src='img/hotel.jpg' className='img-fluid' alt=""/>
+            <img src={hotel} className='img-fluid' alt=""/>
   
             <p className="text-white-50">The highest ranked hotels that work best for your trip. Hotels selected for both location and quality.</p>
            
@@ -42,14 +55,14 @@ class Home extends Component {
     
            <div className= "col-lg-4 mx-auto">
             <h3 className="text-white mb-4"> Eat and Drink</h3>
-            <img src='img/food.jpeg' className='img-fluid' alt=""/>
+            <img src={food} className='img-fluid' alt=""/>
             <br></br>
             <p className="text-white-50">Handpicked restaurants and bars just for you. The best restaurants optimized for your location.</p>
           </div>
     
            <div className= "col-lg-4 mx-auto">
             <h3 className="text-white mb-4"> Activities </h3>
-            <img src="./img/activity.jpg" className="img-fluid" alt=""/>
+            <img src={activity} className="img-fluid" alt=""/>
             <br></br>
             <p className="text-white-50">Recommendations of the best things to do in a city provided by local experts</p>
           </div>
@@ -86,6 +99,7 @@ class Home extends Component {
   
     
     
+    </div>
     </div>
     
         

@@ -22,7 +22,7 @@ class App extends Component {
     <HashRouter>
     <div id = "home" className="App" >
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
+        {/* <img className="logopad" src={logoWhite} alt="Logo" /> */}
         <div className="container">
           <a className="navbar-brand js-scroll-trigger" href="#page-top"></a>
           <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,18 +32,18 @@ class App extends Component {
 
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item" className="brutefont">
+            <li className="nav-item" className="nav-link js-scroll-trigger" className="brutefont">
               {/* <a className="nav-link js-scroll-trigger" href="#home">Home</a> */}
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Home {"   "}</NavLink>
             </li>
-            <li className="nav-item" className="brutefont">
+            {/* <li className="nav-item" className="brutefont">
               <a className="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
-            </li>
+            </li> */}
             <li className="nav-item" className="brutefont">
-              <NavLink to="/preferences">Build</NavLink>
+              <NavLink to="/preferences">Build An itinerary</NavLink>
               {/*<Link to={'/preferences'}> Build a personal itinerary</Link> */}
             </li>
           </ul>
