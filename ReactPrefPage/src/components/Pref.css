@@ -1,9 +1,140 @@
-.body {
-    font: Montserrat;
-    background-color: rgb(159, 189, 250); 
-  }
-  
-  
-  
-  
-  
+
+body {
+  background-color: #F0F8FF;
+  margin: 0;
+  box-align: center;
+  justify-content: center;
+}
+h1, h2, p, ul, li {
+  font-family: Montserrat;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px;
+}
+.PrefQuiz{
+  text-align: center;
+  padding: 5px;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1px;
+}
+.QuizBody{
+  justify-content: center;
+  position: center;
+}
+#quiz{
+  display: flex;
+  justify-content: center;
+}
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; 
+  padding:30px;
+}
+* {
+  box-sizing: border-box;
+}
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 3px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #eefbfe;
+}
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: center;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 28px;
+  height: 28px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 28px;
+  height: 28px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+

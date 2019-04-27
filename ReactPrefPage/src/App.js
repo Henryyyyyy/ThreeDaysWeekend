@@ -7,7 +7,7 @@ import {Route, NavLink, HashRouter} from "react-router-dom";
 import Preferences from './components/Preferences';
 import Home from './components/Home';
 import logo from './logo.png';
-import logoWhite from './img/LogoWhite.png';
+import logoWhite from './components/img/LogoWhite.png';
 import user from "./user.svg";
 import home from "./home.svg";
 import './App.css';

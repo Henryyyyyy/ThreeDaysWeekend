@@ -56,7 +56,7 @@ function AutoGrid(props) {
       <Grid container spacing={24}>
         <Grid item xs>
 
-          <Paper className={classes.paper}>breakfast</Paper>
+          <Paper className={classes.paper}>breakfast</Paper> 
           <center><h2> Bfast Name </h2></center>
 
         </Grid>

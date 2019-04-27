@@ -124,10 +124,15 @@ class Preferences extends Component {
     return (
      
       <div className="App">
+      
         <body>
+        <div className="PrefQuiz">
+        <h1>Build Your Personal Itinerary</h1>
+        </div>
+        <div id="quiz"className="QuizBody">
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        </div>
         </body>
-        
       </div>
     );
 
