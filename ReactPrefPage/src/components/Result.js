@@ -69,7 +69,7 @@ function AutoGrid(props) {
         <Grid item xs>
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/>
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper className={classes.paper}>breakfastArray[0].name</Paper></center>
 
         </Grid>
 
@@ -77,7 +77,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper className={classes.paper}>breakfastArray[1].name</Paper></center>
 
         </Grid>
 
@@ -85,7 +85,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper className={classes.paper}>breakfastArray[2].name</Paper></center>
 
         </Grid>
 
@@ -127,7 +127,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper className={classes.paper}>lunchArray[0].name</Paper></center>
 
         </Grid>
 
@@ -135,7 +135,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper className={classes.paper}>lunchArray[1].name</Paper></center>
 
         </Grid>
 
@@ -143,7 +143,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper className={classes.paper}>lunchArray[2].name</Paper></center>
 
         </Grid>
 
@@ -184,7 +184,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Dinner </Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper className={classes.paper}>dinnerArray[0].name</Paper></center>
 
         </Grid>
 
@@ -192,7 +192,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Dinner</Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper className={classes.paper}>dinnerArray[1].name</Paper></center>
 
         </Grid>
 
@@ -200,7 +200,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Dinner</Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper className={classes.paper}>dinnerArray[2].name</Paper></center>
 
         </Grid>
 
