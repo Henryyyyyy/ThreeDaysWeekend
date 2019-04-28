@@ -1,8 +1,10 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 import './Result.css';
 import breakfast from './img/breakfast.jpg';
 import dinner from './img/dinner.jpg';
@@ -52,11 +54,26 @@ var b1a = breakfastArray[0].location;
 var b2 = breakfastArray[1].name;
 var b3 = breakfastArray[2].name;
 
-function AutoGrid(props) {
-  const { classes } = props;
+class Results extends Component {
+constructor(props) {
+  super(props);
+
+  this.toggle = this.toggle.bind(this);
+  this.state = {
+    popoverOpen: false
+  };
+}
+
+toggle() {
+  this.setState({
+    popoverOpen: !this.state.popoverOpen
+  });
+}
+
+render(){
 
   return (
-    <div className= "fullGrid" className={classes.root}>
+    <div className= "fullGrid" >
 
       <Grid container spacing={40} className= "toppad pad">
         <Grid item xs>
@@ -84,10 +101,22 @@ function AutoGrid(props) {
 
       <Grid container spacing={40} className= "pad">
         <Grid item xs>
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <Paper >Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/>
-          <Paper className={classes.paper}>{breakfastArray[0].name}, {b1a}</Paper>
-       
+          <Paper > 
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+          
+          
+          
+          </Paper>
+         
           </center>
           
 
@@ -95,17 +124,36 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <Paper>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>{b2}</Paper></center>
+          <Paper >
+
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[1].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <Paper >Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>{b3}</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[2].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
@@ -116,25 +164,25 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <Paper >Morning Activity</Paper>
           <center> <img src={morningAct} className="pics" alt=""/> 
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper >MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <Paper >Morning Activity</Paper>
           <center> <img src={morningAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper >MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <Paper >Morning Activity</Paper>
           <center><img src={morningAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper >MorningAct Name</Paper></center>
 
         </Grid>
 
@@ -145,25 +193,52 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <Paper >Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>lunchArray[0].name</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs >
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <Paper >Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>lunchArray[1].name</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <Paper >Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>lunchArray[2].name</Paper></center>
+          <Paper>
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
@@ -174,24 +249,24 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <Paper >Afternoon Activity</Paper>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >AfternoonAct Name</Paper></center>
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <Paper >Afternoon Activity</Paper>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >AfternoonAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <Paper >Afternoon Activity</Paper>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >AfternoonAct Name</Paper></center>
 
         </Grid>
 
@@ -202,25 +277,52 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner </Paper>
+          <Paper >Dinner </Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>dinnerArray[0].name</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
+          <Paper >Dinner</Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>dinnerArray[1].name</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
+          <Paper >Dinner</Paper>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>dinnerArray[2].name</Paper></center>
+          <Paper >
+          <div>
+            <Button id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
@@ -231,25 +333,25 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+          <Paper >Night Activity</Paper>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper >NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+          <Paper >Night Activity</Paper>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper >NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+          <Paper >Night Activity</Paper>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper>NightAct Name</Paper></center>
         </Grid>
 
       </Grid>
@@ -262,11 +364,7 @@ function AutoGrid(props) {
 
 }
 
-AutoGrid.propTypes = {
-
-  classes: PropTypes.object.isRequired,
-
-};
 
 
-export default withStyles(styles)(AutoGrid);
+}
+export default Results;
