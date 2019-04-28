@@ -68,21 +68,24 @@ function AutoGrid(props) {
       <Grid container spacing={40} className= "pad">
         <Grid item xs>
           <Paper className={classes.paper}>Breakfast</Paper>
-          <center><img src={breakfast} className="pics" alt=""/> <h2>Bfast Name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/>
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Breakfast</Paper>
-          <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Breakfast</Paper>
-          <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
 
         </Grid>
 
@@ -94,21 +97,24 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> <img src={morningAct} className="pics" alt=""/> Morning Activity Name</h2></center>
+          <center> <img src={morningAct} className="pics" alt=""/> 
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center> <img src={morningAct} className="pics" alt=""/><h2> Morning Activity Name </h2></center>
+          <center> <img src={morningAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><img src={morningAct} className="pics" alt=""/><h2> Morning Activity Name </h2></center>
+          <center><img src={morningAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
@@ -120,21 +126,24 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
 
         </Grid>
 
         <Grid item xs >
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name </h2></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
 
         </Grid>
 
@@ -146,21 +155,23 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name </h2></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+        </Grid>
+
+        <Grid item xs>
+
+          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name </h2></center>
-
-        </Grid>
-
-        <Grid item xs>
-
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name</h2></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
 
         </Grid>
 
@@ -172,21 +183,24 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner </Paper>
-          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name</h2></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
@@ -198,22 +212,24 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name </h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name</h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name </h2></center>
-
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
         </Grid>
 
       </Grid>
