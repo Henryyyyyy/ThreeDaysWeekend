@@ -12,7 +12,7 @@ module.exports = {
 
 let DEBUG = false;
 
-MatchRestaurants(["male", "12", "solo", "whatever", "trendy", "award-winning chef", "get fucking lit"], "breakfast")
+console.log(MatchRestaurants(["male", "12", "solo", "whatever", "trendy", "award-winning chef", "get fucking lit"], "lunch"));
 
 function MatchRestaurants(pref, meal){
     RESULT = [""];
@@ -44,32 +44,38 @@ function MatchRestaurants(pref, meal){
         }
 
         //search
-        
-        let query = {meals: meal, audience: audience};
-        queryCollection(col, query, function(){
-            // if (DEBUG) console.log("audience ===========");
-            // if (DEBUG) console.log(matchedList);
-        });
-        query = {meals: meal, styles: style};
-        queryCollection(col, query, function(){
-            // if (DEBUG) console.log("style ===========");
-            // if (DEBUG) console.log(matchedList);
-        });
-        query = {meals: meal, features: feature};
-        queryCollection(col, query, function(){
-            if (DEBUG) console.log("===========");
-            if (DEBUG) console.log(matchedList);
-
-            //now matchedList is complete. Rank!
-            let dic = countMatches(matchedList);
-            RESULT = rankMataches(dic);
-            // console.log(RESULT);
-            //no matches
-            // if (lst.length === 0): 
-
+        function wrapCallBack(callback){
+            let query = {meals: meal, audience: audience};
+            queryCollection(col, query, function(){
+                // if (DEBUG) console.log("audience ===========");
+                // if (DEBUG) console.log(matchedList);
             });
+            query = {meals: meal, styles: style};
+            queryCollection(col, query, function(){
+                // if (DEBUG) console.log("style ===========");
+                // if (DEBUG) console.log(matchedList);
+            });
+            query = {meals: meal, features: feature};
+            queryCollection(col, query, function(){
+                if (DEBUG) console.log("===========");
+                if (DEBUG) console.log(matchedList);
+    
+                //now matchedList is complete. Rank!
+                let dic = countMatches(matchedList);
+                RESULT = rankMataches(dic);
+                callback();
+                // console.log(RESULT);
+                
+                //no matches
+                // if (lst.length === 0): 
+                });
+        }
+        wrapCallBack(function(){
+            // console.log(RESULT);
+            return RESULT;
+        });
+        
     });
-    console.log(RESULT);
 }
 
 //given matchedList, count each obj id occurence
