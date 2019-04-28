@@ -207,7 +207,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={40} className = "pad">
+      <Grid container spacing={40} className = "pad extrapadB">
 
         <Grid item xs>
 
@@ -236,6 +236,7 @@ function AutoGrid(props) {
       <br></br>
 
     </div>
+  
 
   );
 
