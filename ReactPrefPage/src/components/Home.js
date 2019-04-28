@@ -38,7 +38,7 @@ class Home extends Component {
           <h1 className="text-white toppad">Three Day Weekend</h1>
           <h2 className="text-white-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
           <center><button className="button"> 
-          <NavLink to="/preferences">Build An itinerary</NavLink>
+          <NavLink to="/preferences" style={{color: 'white', textDecoration: 'none'}} activeStyle={{color: 'white', textDecoration: 'none'}}>Build An itinerary</NavLink>
            < /button></center>
           
         </div>
