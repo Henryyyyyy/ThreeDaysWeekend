@@ -41,45 +41,47 @@ function AutoGrid(props) {
   return (
     <div className= "fullGrid" className={classes.root}>
 
-      <Grid container spacing={24} className= "toppad">
+      <Grid container spacing={40} className= "toppad pad">
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 1</Paper>
+          <center><button className=" color button"><h3 className= "font"> Day 1 </h3></button></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 2</Paper>
+          <center><button className="color button"><h3 className= "font"> Day 2 </h3></button></center>
+
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 3</Paper>
+          <center><button className="color button"><h3 className= "font"> Day 3 </h3></button></center>
+
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className= "pad">
         <Grid item xs>
-          <Paper className={classes.paper}>breakfast</Paper>
+          <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> <h2>Bfast Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>breakfast</Paper>
+          <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>breakfast</Paper>
+          <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
 
         </Grid>
@@ -87,7 +89,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className= "pad">
 
         <Grid item xs>
 
@@ -113,7 +115,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className="pad">
 
         <Grid item xs>
 
@@ -139,7 +141,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className="pad">
 
         <Grid item xs>
 
@@ -165,7 +167,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className= "pad">
 
         <Grid item xs>
 
@@ -191,7 +193,7 @@ function AutoGrid(props) {
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className = "pad">
 
         <Grid item xs>
 
