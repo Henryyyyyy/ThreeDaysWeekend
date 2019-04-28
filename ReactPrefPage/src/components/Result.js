@@ -101,11 +101,11 @@ render(){
 
       <Grid container spacing={40} className= "pad">
         <Grid item xs>
-          <Paper >Breakfast</Paper>
+          <center><Paper>Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/>
           <Paper > 
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -124,12 +124,12 @@ render(){
 
         <Grid item xs>
 
-          <Paper>Breakfast</Paper>
+          <center><Paper>Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
           <Paper >
 
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[1].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -142,11 +142,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Breakfast</Paper>
+          <center><Paper >Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper >
+          <Paper>
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[2].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -164,25 +164,25 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Morning Activity</Paper>
+          <center><Paper >Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/> 
-          <Paper >MorningAct Name</Paper></center>
+          <Paper >Perkins</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Morning Activity</Paper>
+          <center><Paper>Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/>
-          <Paper >MorningAct Name</Paper></center>
+          <Paper >Wilson Gym</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Morning Activity</Paper>
+          <center><Paper>Morning Activity</Paper></center>
           <center><img src={morningAct} className="pics" alt=""/>
-          <Paper >MorningAct Name</Paper></center>
+          <Paper> Brodie Gym</Paper></center>
 
         </Grid>
 
@@ -193,11 +193,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -210,11 +210,11 @@ render(){
 
         <Grid item xs >
 
-          <Paper >Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -227,11 +227,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper>
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -249,24 +249,24 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Afternoon Activity</Paper>
+          <center><Paper >Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper >AfternoonAct Name</Paper></center>
+          <Paper >Perkins</Paper></center>
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Afternoon Activity</Paper>
+           <center><Paper >Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper >AfternoonAct Name</Paper></center>
+          <Paper >CS 290 Office Hours</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Afternoon Activity</Paper>
+           <center><Paper>Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper >AfternoonAct Name</Paper></center>
+          <Paper >Eno Quarry</Paper></center>
 
         </Grid>
 
@@ -277,11 +277,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Dinner </Paper>
+          <center><Paper>Dinner </Paper> </center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -294,11 +294,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Dinner</Paper>
+          <center><Paper>Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -311,11 +311,11 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Dinner</Paper>
+          <center><Paper >Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover1" type="button">
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
@@ -333,25 +333,25 @@ render(){
 
         <Grid item xs>
 
-          <Paper >Night Activity</Paper>
+           <center><Paper >Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper >NightAct Name</Paper></center>
+          <Paper >Devines</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Night Activity</Paper>
+           <center><Paper >Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper >NightAct Name</Paper></center>
+          <Paper >Shooters</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper >Night Activity</Paper>
+          <center><Paper >Night Activity</Paper></center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper>NightAct Name</Paper></center>
+          <Paper>Mavericks</Paper></center>
         </Grid>
 
       </Grid>
