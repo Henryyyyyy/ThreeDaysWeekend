@@ -47,7 +47,7 @@ var breakfastArray = [
   }
 ];
 
-var b1 = breakfastArray[0].name;
+
 var b1a = breakfastArray[0].location;
 var b2 = breakfastArray[1].name;
 var b3 = breakfastArray[2].name;
@@ -86,7 +86,7 @@ function AutoGrid(props) {
         <Grid item xs>
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/>
-          <Paper className={classes.paper}>{b1}, {b1a}</Paper>
+          <Paper className={classes.paper}>{breakfastArray[0].name}, {b1a}</Paper>
        
           </center>
           
