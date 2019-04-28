@@ -87,7 +87,7 @@ function AutoGrid(props) {
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/>
           <Paper className={classes.paper}>{b1}, {b1a}</Paper>
-            
+       
           </center>
           
 
