@@ -34,6 +34,23 @@ const styles = theme => ({
 
 });
 
+var breakfastArray = [
+  {
+    name: "Chipotle",
+    location: "TC"
+  },
+  {
+    name: "McDonalds"  
+  },
+  {
+    name: "Subway"
+  }
+];
+
+var b1 = breakfastArray[0].name;
+var b1a = breakfastArray[0].location;
+var b2 = breakfastArray[1].name;
+var b3 = breakfastArray[2].name;
 
 function AutoGrid(props) {
   const { classes } = props;
@@ -69,7 +86,10 @@ function AutoGrid(props) {
         <Grid item xs>
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/>
-          <Paper className={classes.paper}>breakfastArray[0].name</Paper></center>
+          <Paper className={classes.paper}>{b1}, {b1a}</Paper>
+            
+          </center>
+          
 
         </Grid>
 
@@ -77,7 +97,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>breakfastArray[1].name</Paper></center>
+          <Paper className={classes.paper}>{b2}</Paper></center>
 
         </Grid>
 
@@ -85,7 +105,7 @@ function AutoGrid(props) {
 
           <Paper className={classes.paper}>Breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>breakfastArray[2].name</Paper></center>
+          <Paper className={classes.paper}>{b3}</Paper></center>
 
         </Grid>
 
