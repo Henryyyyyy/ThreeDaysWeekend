@@ -1,0 +1,24 @@
+.logo {
+	width: 7.5%;
+	height: 15%;
+	padding-left: 25px;
+	padding-top : 25px;
+}
+
+.title{
+	color: white;
+	padding-bottom: 20px;
+}
+
+.button {
+  background-color: #6f8ecd;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+

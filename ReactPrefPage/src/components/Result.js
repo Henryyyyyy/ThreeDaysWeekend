@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import './Result.css';
+import breakfast from './img/breakfast.jpg';
+import dinner from './img/dinner.jpg';
+import lunch from './img/lunch.jpg';
+import morningAct from './img/morningAct.jpg';
+import rooftopBar from './img/rooftopBar.jpg;'
+import noonAct from './img/noonAct.jpg';
 
 const styles = theme => ({
   root: {
@@ -31,7 +38,8 @@ function AutoGrid(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={24}>
+
+      <Grid container spacing={24} className= "toppad">
         <Grid item xs>
 
           <Paper className={classes.paper}>Day 1</Paper>
@@ -56,22 +64,21 @@ function AutoGrid(props) {
       <Grid container spacing={24}>
         <Grid item xs>
 
-          <Paper className={classes.paper}>breakfast</Paper> 
-          <center><h2> Bfast Name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/> <h2>Bfast Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>breakfast</Paper>
-          <center><h2> Bfast name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>breakfast</Paper>
-          <center><h2> Bfast name </h2></center>
+          <center><img src={breakfast} className="pics" alt=""/> <h2> Bfast name </h2></center>
 
         </Grid>
 
@@ -83,21 +90,21 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name</h2></center>
+          <center><h2> <img src={morningAct} className="pics" alt=""/> Morning Activity Name</h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name </h2></center>
+          <center> <img src={morningAct} className="pics" alt=""/><h2> Morning Activity Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name </h2></center>
+          <center><img src={morningAct} className="pics" alt=""/><h2> Morning Activity Name </h2></center>
 
         </Grid>
 
@@ -109,21 +116,21 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name</h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name </h2></center>
+          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name</h2></center>
 
         </Grid>
 
@@ -135,21 +142,21 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name </h2></center>
+          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name </h2></center>
+          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name</h2></center>
+          <center><img src={noonAct} className="pics" alt=""/><h2> Afternoon Activity Name</h2></center>
 
         </Grid>
 
@@ -160,22 +167,22 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name</h2></center>
+          <Paper className={classes.paper}><img src={dinner} className="pics" alt=""/> </Paper>
+          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name</h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name </h2></center>
 
         </Grid>
 
@@ -187,21 +194,21 @@ function AutoGrid(props) {
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name </h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name </h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name</h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name</h2></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name </h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/><h2> Night Activity Name </h2></center>
 
         </Grid>
 

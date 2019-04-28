@@ -1,6 +1,6 @@
 
 body {
-  background-color: #F0F8FF;
+  background-color: #33508a;
   margin: 0;
   box-align: center;
   justify-content: center;
@@ -22,6 +22,7 @@ h1, h2, p, ul, li {
 .QuizBody{
   justify-content: center;
   position: center;
+  background-color: #f0f8ff;
 }
 #quiz{
   display: flex;
@@ -138,3 +139,10 @@ h1, h2, p, ul, li {
   transition: all 0.3s;
 }
 
+.toppad {
+  padding-top: 25px;
+}
+
+.bottompad{
+  padding-bottom:25px;
+}

@@ -5,7 +5,8 @@ import 'bootstrap/scss/bootstrap.scss';
 import food from './img/food.jpeg';
 import hotel from './img/hotel.jpg';
 import activity from './img/activity.jpg';
-//import './Home.css';
+import logo from '../logo.png';
+import './Home.css';
 
 class Home extends Component {
 
@@ -22,13 +23,18 @@ class Home extends Component {
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
           </ul>
+        
         </div>      
     <div className="Content">   
     <header className="masthead">
-      <div className="container d-flex h-100 align-items-center">
+    <img src={logo} className="img-fluid logo" alt=""/>
+    <br></br>
+      <div className="container d-flex align-items-center">
+      <br></br>
         <div className="mx-auto text-center">
-          <h1 className="text-center">Three Day Weekend</h1>
-          <h2 className="text-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
+          <h1 className="text-white toppad">Three Day Weekend</h1>
+          <h2 className="text-white-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
+          <center><button className="button"> Build Your Itinerary Now! < /button></center>
           
         </div>
       </div>
@@ -82,7 +88,7 @@ class Home extends Component {
   
             <form className="form-inline d-flex">
               <input type="email" className="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address..."/>
-              <button type="submit" className="btn btn-primary mx-auto">Subscribe</button>
+              <button type="submit" className="button button1">Subscribe</button>
             </form>
   
   
