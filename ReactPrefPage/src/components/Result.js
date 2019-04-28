@@ -3,8 +3,17 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import './Result.css';
+import breakfast from './img/breakfast.jpg';
+import dinner from './img/dinner.jpg';
+import lunch from './img/lunch.jpg';
+import morningAct from './img/morningAct.jpg';
+import noonAct from './img/noonAct.jpg';
+import rooftopBar from './img/roof.jpg'
+
 
 const styles = theme => ({
+  
   root: {
     flexGrow: 1,
   },
@@ -30,179 +39,197 @@ function AutoGrid(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
+    <div className= "fullGrid" className={classes.root}>
+
+      <Grid container spacing={40} className= "toppad pad">
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 1</Paper>
+          <center><button className=" color button"><h3 className= "font"> Day 1 </h3></button></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 2</Paper>
+          <center><button className="color button"><h3 className= "font"> Day 2 </h3></button></center>
+
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Day 3</Paper>
+          <center><button className="color button"><h3 className= "font"> Day 3 </h3></button></center>
 
-        </Grid>
-
-      </Grid>
-      <br></br>
-
-      <Grid container spacing={24}>
-        <Grid item xs>
-
-          <Paper className={classes.paper}>breakfast</Paper>
-          <center><h2> Bfast Name </h2></center>
-
-        </Grid>
-
-        <Grid item xs>
-
-          <Paper className={classes.paper}>breakfast</Paper>
-          <center><h2> Bfast name </h2></center>
-
-        </Grid>
-
-        <Grid item xs>
-
-          <Paper className={classes.paper}>breakfast</Paper>
-          <center><h2> Bfast name </h2></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className= "pad">
+        <Grid item xs>
+          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><img src={breakfast} className="pics" alt=""/>
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className= "pad">
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name</h2></center>
+          <center> <img src={morningAct} className="pics" alt=""/> 
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name </h2></center>
+          <center> <img src={morningAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Morning Activity</Paper>
-          <center><h2> Morning Activity Name </h2></center>
+          <center><img src={morningAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>MorningAct Name</Paper></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className="pad">
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+
+        </Grid>
+
+        <Grid item xs >
+
+          <Paper className={classes.paper}>Lunch</Paper>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name </h2></center>
-
-        </Grid>
-
-        <Grid item xs>
-
-          <Paper className={classes.paper}>Lunch</Paper>
-          <center><h2> Lunch Place Name</h2></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className="pad">
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name </h2></center>
-
-        </Grid>
-
-        <Grid item xs>
-
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name </h2></center>
-
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Afternoon Activity</Paper>
-          <center><h2> Afternoon Activity Name</h2></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className= "pad">
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name</h2></center>
+          <Paper className={classes.paper}>Dinner </Paper>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Dinner</Paper>
-          <center><h2> Dinner Name </h2></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper className={classes.paper}>Dinner Name</Paper></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={24}>
+      <Grid container spacing={40} className = "pad">
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name </h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name</h2></center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
           <Paper className={classes.paper}>Night Activity</Paper>
-          <center><h2> Night Activity Name </h2></center>
-
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper className={classes.paper}>NightAct Name</Paper></center>
         </Grid>
 
       </Grid>

@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/scss/bootstrap.scss';
-import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
+import {Route, NavLink, HashRouter} from "react-router-dom";
+//import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
 import Preferences from './components/Preferences';
+import Home from './components/Home';
 import logo from './logo.png';
-import logoWhite from './LogoWhite.png';
+import logoWhite from './components/img/LogoWhite.png';
 import user from "./user.svg";
 import home from "./home.svg";
 import './App.css';
@@ -17,11 +19,10 @@ class App extends Component {
   render() {
     return (
       
-    
-    <div className="App" >
-      <div>
+    <HashRouter>
+    <div id = "home" className="App" >
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <img className="logopad" src={"img/LogoWhite.png"} alt="Logo" />
+        {/* <img className="logopad" src={logoWhite} alt="Logo" /> */}
         <div className="container">
           <a className="navbar-brand js-scroll-trigger" href="#page-top"></a>
           <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,24 +32,26 @@ class App extends Component {
 
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item" className="brutefont">
+            <li className="nav-item" className="nav-link js-scroll-trigger" className="brutefont">
+               <a className="nav-link js-scroll-trigger" href="#home"> <NavLink to="/" style={{color: 'white', textDecoration: 'none'}} activeStyle={{color: 'white', textDecoration: 'none'}}>Home {"   "}</NavLink></a>    
+            </li>
+            {/* <li className="nav-item" className="brutefont">
               <a className="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
-            </li>
-            <li className="nav-item" className="brutefont">
-              <BrowserRouter>
-              <Link to={'/preferences'}> Build a personal itinerary</Link>
-              </BrowserRouter>
-            </li>
+            </li> 
+           */}
           </ul>
         </div>      
       </nav>
-      </div>
 
-   <div>   
-  <header className="masthead">
+  <div className="Content"> 
+  <Route exact path="/" component={Home}/>
+  <Route path="/preferences" component={Preferences}/>
+            
+
+  {/* <header className="masthead">
     <div className="container d-flex h-100 align-items-center">
       <div className="mx-auto text-center">
         <h1 className="text-center">Three Day Weekend</h1>
@@ -125,16 +128,14 @@ class App extends Component {
     <div className="container">
       Copyright &copy; The Three Day Weekend 2019
     </div>
-  </footer>
+  </footer> */}
 
   
   
   </div>
-      </div>
-      
-        
-    
-      );
+  </div>
+  </HashRouter>
+    );
   }
 }
 

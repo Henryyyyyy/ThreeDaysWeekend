@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import quizQuestions from '../api/quizQuestions';
 import Quiz from './Quiz';
 import Result from './Result';
+import './Pref.css';
 import logo from '../logo.png';
 import user from "../user.svg"
 import home from "../home.svg"
@@ -18,7 +19,6 @@ class Preferences extends Component {
       question: '',
       answerOptions: [],
       answer: '',
-      
       answersCount: [],
       result: ''
     };
@@ -29,12 +29,14 @@ class Preferences extends Component {
   DEBUG = true;
   
   componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
+    //maps current question with answer options
+    const AnswerOptions = quizQuestions.map(question =>
       question.answers
     );
     this.setState({
+      //assigns the question ti the first question in the map, with the corresponding answer options
       question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      answerOptions: AnswerOptions[0]
     });
   }
 
@@ -84,6 +86,7 @@ class Preferences extends Component {
   }
    
   setNextQuestion() {
+    //increments counter and resets the state to the relevant information for the new question
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
 
@@ -121,11 +124,18 @@ class Preferences extends Component {
     return (
      
       <div className="App">
+      
         <body>
+        <img src={logo} className="img-fluid logo bottompad" alt=""/>
+        <center><h1 className= "title">Build Your Personal Itinerary</h1></center>
+        <div className="PrefQuiz">
+        </div>
+        <div id="quiz"className="QuizBody">
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        </div>
         </body>
-        
       </div>
+
     );
 
   }
