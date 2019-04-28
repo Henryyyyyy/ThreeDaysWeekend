@@ -33,19 +33,15 @@ class App extends Component {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item" className="nav-link js-scroll-trigger" className="brutefont">
-              {/* <a className="nav-link js-scroll-trigger" href="#home">Home</a> */}
-              <NavLink to="/">Home {"   "}</NavLink>
+               <a className="nav-link js-scroll-trigger" href="#home"> <NavLink to="/">Home {"   "}</NavLink></a>    
             </li>
             {/* <li className="nav-item" className="brutefont">
               <a className="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#signup">Contact</a>
-            </li> */}
-            <li className="nav-item" className="brutefont">
-              <NavLink to="/preferences">Build An itinerary</NavLink>
-              {/*<Link to={'/preferences'}> Build a personal itinerary</Link> */}
-            </li>
+            </li> 
+           */}
           </ul>
         </div>      
       </nav>

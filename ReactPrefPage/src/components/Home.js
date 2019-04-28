@@ -7,6 +7,9 @@ import hotel from './img/hotel.jpg';
 import activity from './img/activity.jpg';
 import logo from '../logo.png';
 import './Home.css';
+import {Route, NavLink, HashRouter} from "react-router-dom";
+//import { BrowserRouter, Router, Switch, Route, Link } from 'react-router-dom';
+import Preferences from './Preferences';
 
 class Home extends Component {
 
@@ -34,7 +37,9 @@ class Home extends Component {
         <div className="mx-auto text-center">
           <h1 className="text-white toppad">Three Day Weekend</h1>
           <h2 className="text-white-50 mx-auto mt-2 mb-5">Perfectly Curated Three Day Weekend Itineraries</h2>
-          <center><button className="button"> Build Your Itinerary Now! < /button></center>
+          <center><button className="button"> 
+          <NavLink to="/preferences">Build An itinerary</NavLink>
+           < /button></center>
           
         </div>
       </div>

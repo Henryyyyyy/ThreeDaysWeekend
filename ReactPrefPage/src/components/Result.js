@@ -8,10 +8,12 @@ import breakfast from './img/breakfast.jpg';
 import dinner from './img/dinner.jpg';
 import lunch from './img/lunch.jpg';
 import morningAct from './img/morningAct.jpg';
-import rooftopBar from './img/rooftopBar.jpg;'
 import noonAct from './img/noonAct.jpg';
+import rooftopBar from './img/roof.jpg'
+
 
 const styles = theme => ({
+  
   root: {
     flexGrow: 1,
   },
@@ -37,7 +39,7 @@ function AutoGrid(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <div className= "fullGrid" className={classes.root}>
 
       <Grid container spacing={24} className= "toppad">
         <Grid item xs>
@@ -63,7 +65,7 @@ function AutoGrid(props) {
 
       <Grid container spacing={24}>
         <Grid item xs>
-
+          <Paper className={classes.paper}>breakfast</Paper>
           <center><img src={breakfast} className="pics" alt=""/> <h2>Bfast Name </h2></center>
 
         </Grid>
@@ -120,7 +122,7 @@ function AutoGrid(props) {
 
         </Grid>
 
-        <Grid item xs>
+        <Grid item xs >
 
           <Paper className={classes.paper}>Lunch</Paper>
           <center><img src={lunch} className="pics" alt=""/><h2> Lunch Place Name </h2></center>
@@ -167,7 +169,7 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}><img src={dinner} className="pics" alt=""/> </Paper>
+          <Paper className={classes.paper}>Dinner </Paper>
           <center><img src={dinner} className="pics" alt=""/><h2> Dinner Name</h2></center>
 
         </Grid>
