@@ -12,7 +12,7 @@ import lunch from './img/lunch.jpg';
 import morningAct from './img/morningAct.jpg';
 import noonAct from './img/noonAct.jpg';
 import rooftopBar from './img/roof.jpg'
-
+const Gen =  require('./../api/_service');
 
 const styles = theme => ({
   
@@ -36,18 +36,7 @@ const styles = theme => ({
 
 });
 
-var breakfastArray = [
-  {
-    name: "Chipotle",
-    location: "TC"
-  },
-  {
-    name: "McDonalds"  
-  },
-  {
-    name: "Subway"
-  }
-];
+var breakfastArray = Gen.generateRest();
 
 
 var b1a = breakfastArray[0].location;
