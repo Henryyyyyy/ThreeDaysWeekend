@@ -135,7 +135,7 @@ render(){
             {breakfastArray[1].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <PopoverBody> Location: {breakfastArray[1].location}</PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -152,7 +152,7 @@ render(){
             {breakfastArray[2].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <PopoverBody> Location: {breakfastArray[2].location}</PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -200,10 +200,10 @@ render(){
           <Paper >
           <div>
             <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            {lunchArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <PopoverBody> Location: {unchArray[0].name}</PopoverBody>
             </Popover>
       </div>
             </Paper></center>
