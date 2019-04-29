@@ -49,7 +49,7 @@ var breakfastArray = [
   }
 ];
 
-
+ 
 var b1a = breakfastArray[0].location;
 var b2 = breakfastArray[1].name;
 var b3 = breakfastArray[2].name;
