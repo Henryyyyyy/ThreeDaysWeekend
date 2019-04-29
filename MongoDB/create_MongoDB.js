@@ -12,6 +12,7 @@ MongoClient.connect(url, function (err, db) {
     db.close();
 });
 
+
 // Create collection
 MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
