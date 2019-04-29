@@ -11,12 +11,22 @@ module.exports = {
 }
 
 let DEBUG = false;
+let RESULT = [""];
 
-console.log(MatchRestaurants(["male", "12", "solo", "whatever", "trendy", "award-winning chef", "get fucking lit"], "lunch"));
+let a = fetchMatches(["male", "12", "solo", "whatever", "trendy", "award-winning chef", "get fucking lit"], "lunch");
+console.log(a);
+
+function fetchMatches(ary, meal){
+    MatchRestaurants(ary, meal);
+    setTimeout(() => {return RESULT}, 500);
+    
+}
 
 function MatchRestaurants(pref, meal){
-    RESULT = [""];
-    MongoClient.connect(URL, function(err, db) {
+    // RESULT = [""];
+    function wrapCallBack(callback){
+    
+    MongoClient.connect(URL, { useNewUrlParser: true }, function(err, db) {
         if (err) throw err;
         
         //translate input
@@ -44,7 +54,6 @@ function MatchRestaurants(pref, meal){
         }
 
         //search
-        function wrapCallBack(callback){
             let query = {meals: meal, audience: audience};
             queryCollection(col, query, function(){
                 // if (DEBUG) console.log("audience ===========");
@@ -69,14 +78,14 @@ function MatchRestaurants(pref, meal){
                 //no matches
                 // if (lst.length === 0): 
                 });
-        }
-        wrapCallBack(function(){
-            // console.log(RESULT);
-            return RESULT;
-        });
-        
+    });//end of mongo connection
+    
+}// end of wrapCallBack
+    wrapCallBack(function(){
+        // console.log(RESULT);
     });
-}
+    // return RESULT;
+}// end of MatchRestaurants
 
 //given matchedList, count each obj id occurence
 function countMatches(ary){
@@ -137,5 +146,3 @@ function isEmpty(obj) {
 
     return true;
 }
-
- 
