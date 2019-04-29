@@ -1,59 +1,370 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
 import { withStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import tileData from './tileData';
-import image from '../logo.png';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+import './Result.css';
+import breakfast from './img/breakfast.jpg';
+import dinner from './img/dinner.jpg';
+import lunch from './img/lunch.jpg';
+import morningAct from './img/morningAct.jpg';
+import noonAct from './img/noonAct.jpg';
+import rooftopBar from './img/roof.jpg'
+
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'nowrap',
-    justifyContent: 'center',
-    overflow: 'hidden',
-    alignItems: 'center',
-    justify: 'center',
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 1200,
-    height: 1000,
-  },
   
+  root: {
+    flexGrow: 1,
+  },
+
+   textInput: {
+  color: 'white',
+  },
+
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+
+  colored:{
+    color: '33508a',  
+  }
+
 });
 
-function TitlebarGridList(props) {
-  const { classes } = props;
+var breakfastArray = [
+  {
+    name: "Chipotle",
+    location: "TC"
+  },
+  {
+    name: "McDonalds"  
+  },
+  {
+    name: "Subway"
+  }
+];
 
-  return (
-    <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
-          <ListSubheader component="div" align= "left" >Day 1</ListSubheader>
-          <ListSubheader component="div" align= "center" >Day 2</ListSubheader>
-          <ListSubheader component="div" align= "right" >Day 3</ListSubheader>
-        </GridListTile>
-        {tileData.map(tile => (
-          <GridListTile xs = {6} key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar 
-              title={tile.title}
-              subtitle={<span> {tile.author}</span>}
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
-  );
+
+var b1a = breakfastArray[0].location;
+var b2 = breakfastArray[1].name;
+var b3 = breakfastArray[2].name;
+
+class Results extends Component {
+constructor(props) {
+  super(props);
+
+  this.toggle = this.toggle.bind(this);
+  this.state = {
+    popoverOpen: false
+  };
 }
 
-TitlebarGridList.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+toggle() {
+  this.setState({
+    popoverOpen: !this.state.popoverOpen
+  });
+}
 
-export default withStyles(styles)(TitlebarGridList);
+render(){
+
+  return (
+    <div className= "fullGrid" >
+
+      <Grid container spacing={40} className= "toppad pad">
+        <Grid item xs>
+
+          <center><button className=" color button"><h3 className= "font"> Day 1 </h3></button></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><button className="color button"><h3 className= "font"> Day 2 </h3></button></center>
+
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><button className="color button"><h3 className= "font"> Day 3 </h3></button></center>
+
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className= "pad">
+        <Grid item xs>
+          <center><Paper>Breakfast</Paper></center>
+          <center><img src={breakfast} className="pics" alt=""/>
+          <Paper > 
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+          
+          
+          
+          </Paper>
+         
+          </center>
+          
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper>Breakfast</Paper></center>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper >
+
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[1].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper >Breakfast</Paper></center>
+          <center><img src={breakfast} className="pics" alt=""/> 
+          <Paper>
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[2].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className= "pad">
+
+        <Grid item xs>
+
+          <center><Paper >Morning Activity</Paper></center>
+          <center> <img src={morningAct} className="pics" alt=""/> 
+          <Paper >Perkins</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper>Morning Activity</Paper></center>
+          <center> <img src={morningAct} className="pics" alt=""/>
+          <Paper >Wilson Gym</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper>Morning Activity</Paper></center>
+          <center><img src={morningAct} className="pics" alt=""/>
+          <Paper> Brodie Gym</Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className="pad">
+
+        <Grid item xs>
+
+          <center><Paper >Lunch</Paper></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+        <Grid item xs >
+
+          <center><Paper >Lunch</Paper></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper >Lunch</Paper></center>
+          <center><img src={lunch} className="pics" alt=""/>
+          <Paper>
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className="pad">
+
+        <Grid item xs>
+
+          <center><Paper >Afternoon Activity</Paper></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper >Perkins</Paper></center>
+        </Grid>
+
+        <Grid item xs>
+
+           <center><Paper >Afternoon Activity</Paper></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper >CS 290 Office Hours</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+           <center><Paper>Afternoon Activity</Paper></center>
+          <center><img src={noonAct} className="pics" alt=""/>
+          <Paper >Eno Quarry</Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className= "pad">
+
+        <Grid item xs>
+
+          <center><Paper>Dinner </Paper> </center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper>Dinner</Paper></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper >Dinner</Paper></center>
+          <center><img src={dinner} className="pics" alt=""/>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
+
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+      <Grid container spacing={40} className = "pad extrapadB">
+
+        <Grid item xs>
+
+           <center><Paper >Night Activity</Paper> </center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper >Devines</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+           <center><Paper >Night Activity</Paper> </center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper >Shooters</Paper></center>
+
+        </Grid>
+
+        <Grid item xs>
+
+          <center><Paper >Night Activity</Paper></center>
+          <center><img src={rooftopBar} className="pics" alt=""/>
+          <Paper>Mavericks</Paper></center>
+        </Grid>
+
+      </Grid>
+      <br></br>
+
+    </div>
+  
+
+  );
+
+}
+
+
+
+}
+export default Results;

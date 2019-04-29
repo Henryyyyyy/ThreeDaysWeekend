@@ -12,8 +12,8 @@ module.exports = {
     InsertRestaurant,
     DeleteUser,
     UpdateUserFirstName
-}
-
+} 
+UpdateRestaurant(["solo", "family", "significant othe", "Significant Othe", "friend", "group", "family"])
 function InsertRestaurant(DbName, ColName, DocName){
     MongoClient.connect(URL, function(err, db) {
         if (err) throw err;
@@ -53,6 +53,23 @@ function UpdateUserFirstName(UserName, FirstName){
     var myquery = { username: UserName };
     var newvalues = { $set: {firstname: FirstName } };
     dbo.collection("users").updateOne(myquery, newvalues, function(err, res) {
+        if (err) throw err;
+        console.log("1 document updated");
+        db.close();
+    });
+    });
+}
+
+function UpdateRestaurant(updateValue){
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://127.0.0.1:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("restaurants");
+    var myquery = {};
+    var newvalues = { $set: {audience: updateValue } };
+    dbo.collection(COLLECTION).updateMany(myquery, newvalues, function(err, res) {
         if (err) throw err;
         console.log("1 document updated");
         db.close();
