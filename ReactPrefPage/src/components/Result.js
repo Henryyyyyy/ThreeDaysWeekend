@@ -101,7 +101,7 @@ render(){
 
       <Grid container spacing={40} className= "pad">
         <Grid item xs>
-          <center><Paper>Breakfast</Paper></center>
+          <center><Paper className = "gridHead">Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/>
           <Paper > 
           <div>
@@ -109,7 +109,9 @@ render(){
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <PopoverBody> Location: {b1a}
+            </PopoverBody>
+            
             </Popover>
       </div>
           
@@ -124,7 +126,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper>Breakfast</Paper></center>
+          <center><Paper className = "gridHead">Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
           <Paper >
 
@@ -142,7 +144,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Breakfast</Paper></center>
+          <center><Paper className = "gridHead">Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
           <Paper>
           <div>
@@ -164,7 +166,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Morning Activity</Paper></center>
+          <center><Paper className = "gridHead">Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/> 
           <Paper >Perkins</Paper></center>
 
@@ -172,7 +174,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper>Morning Activity</Paper></center>
+          <center><Paper className = "gridHead">Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/>
           <Paper >Wilson Gym</Paper></center>
 
@@ -180,7 +182,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper>Morning Activity</Paper></center>
+          <center><Paper className = "gridHead">Morning Activity</Paper></center>
           <center><img src={morningAct} className="pics" alt=""/>
           <Paper> Brodie Gym</Paper></center>
 
@@ -193,7 +195,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Lunch</Paper></center>
+          <center><Paper className = "gridHead">Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
@@ -210,7 +212,7 @@ render(){
 
         <Grid item xs >
 
-          <center><Paper >Lunch</Paper></center>
+          <center><Paper className = "gridHead">Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
@@ -227,7 +229,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Lunch</Paper></center>
+          <center><Paper className = "gridHead">Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
           <Paper>
           <div>
@@ -249,14 +251,14 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Afternoon Activity</Paper></center>
+          <center><Paper className = "gridHead">Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
           <Paper >Perkins</Paper></center>
         </Grid>
 
         <Grid item xs>
 
-           <center><Paper >Afternoon Activity</Paper></center>
+           <center><Paper className = "gridHead">Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
           <Paper >CS 290 Office Hours</Paper></center>
 
@@ -264,7 +266,7 @@ render(){
 
         <Grid item xs>
 
-           <center><Paper>Afternoon Activity</Paper></center>
+           <center><Paper className = "gridHead">Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
           <Paper >Eno Quarry</Paper></center>
 
@@ -277,7 +279,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper>Dinner </Paper> </center>
+          <center><Paper className = "gridHead">Dinner </Paper> </center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
@@ -294,7 +296,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper>Dinner</Paper></center>
+          <center><Paper className = "gridHead">Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
@@ -311,7 +313,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Dinner</Paper></center>
+          <center><Paper className = "gridHead">Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
@@ -333,7 +335,7 @@ render(){
 
         <Grid item xs>
 
-           <center><Paper >Night Activity</Paper> </center>
+           <center><Paper className = "gridHead">Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
           <Paper >Devines</Paper></center>
 
@@ -341,7 +343,7 @@ render(){
 
         <Grid item xs>
 
-           <center><Paper >Night Activity</Paper> </center>
+           <center><Paper className = "gridHead">Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
           <Paper >Shooters</Paper></center>
 
@@ -349,7 +351,7 @@ render(){
 
         <Grid item xs>
 
-          <center><Paper >Night Activity</Paper></center>
+          <center><Paper className = "gridHead">Night Activity</Paper></center>
           <center><img src={rooftopBar} className="pics" alt=""/>
           <Paper>Mavericks</Paper></center>
         </Grid>
