@@ -1,8 +1,10 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 import './Result.css';
 import breakfast from './img/breakfast.jpg';
 import dinner from './img/dinner.jpg';
@@ -34,12 +36,44 @@ const styles = theme => ({
 
 });
 
+var breakfastArray = [
+  {
+    name: "Chipotle",
+    location: "TC"
+  },
+  {
+    name: "McDonalds"  
+  },
+  {
+    name: "Subway"
+  }
+];
 
-function AutoGrid(props) {
-  const { classes } = props;
+
+var b1a = breakfastArray[0].location;
+var b2 = breakfastArray[1].name;
+var b3 = breakfastArray[2].name;
+
+class Results extends Component {
+constructor(props) {
+  super(props);
+
+  this.toggle = this.toggle.bind(this);
+  this.state = {
+    popoverOpen: false
+  };
+}
+
+toggle() {
+  this.setState({
+    popoverOpen: !this.state.popoverOpen
+  });
+}
+
+render(){
 
   return (
-    <div className= "fullGrid" className={classes.root}>
+    <div className= "fullGrid" >
 
       <Grid container spacing={40} className= "toppad pad">
         <Grid item xs>
@@ -67,25 +101,59 @@ function AutoGrid(props) {
 
       <Grid container spacing={40} className= "pad">
         <Grid item xs>
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><Paper>Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/>
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper > 
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+          
+          
+          
+          </Paper>
+         
+          </center>
+          
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><Paper>Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper >
+
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[1].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Breakfast</Paper>
+          <center><Paper >Breakfast</Paper></center>
           <center><img src={breakfast} className="pics" alt=""/> 
-          <Paper className={classes.paper}>Breakfast Place Name</Paper></center>
+          <Paper>
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[2].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
@@ -96,25 +164,25 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <center><Paper >Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/> 
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper >Perkins</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <center><Paper>Morning Activity</Paper></center>
           <center> <img src={morningAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper >Wilson Gym</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Morning Activity</Paper>
+          <center><Paper>Morning Activity</Paper></center>
           <center><img src={morningAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>MorningAct Name</Paper></center>
+          <Paper> Brodie Gym</Paper></center>
 
         </Grid>
 
@@ -125,25 +193,52 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs >
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Lunch</Paper>
+          <center><Paper >Lunch</Paper></center>
           <center><img src={lunch} className="pics" alt=""/>
-          <Paper className={classes.paper}>Lunch Place Name</Paper></center>
+          <Paper>
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
@@ -154,24 +249,24 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+          <center><Paper >Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >Perkins</Paper></center>
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+           <center><Paper >Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >CS 290 Office Hours</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Afternoon Activity</Paper>
+           <center><Paper>Afternoon Activity</Paper></center>
           <center><img src={noonAct} className="pics" alt=""/>
-          <Paper className={classes.paper}>AfternoonAct Name</Paper></center>
+          <Paper >Eno Quarry</Paper></center>
 
         </Grid>
 
@@ -182,70 +277,94 @@ function AutoGrid(props) {
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner </Paper>
+          <center><Paper>Dinner </Paper> </center>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
+          <center><Paper>Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Dinner</Paper>
+          <center><Paper >Dinner</Paper></center>
           <center><img src={dinner} className="pics" alt=""/>
-          <Paper className={classes.paper}>Dinner Name</Paper></center>
+          <Paper >
+          <div>
+            <Button className= "color button popText" id="Popover1" type="button">
+            {breakfastArray[0].name}
+            </Button>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+            <PopoverBody> Location: {b1a}</PopoverBody>
+            </Popover>
+      </div>
+            </Paper></center>
 
         </Grid>
 
       </Grid>
       <br></br>
 
-      <Grid container spacing={40} className = "pad">
+      <Grid container spacing={40} className = "pad extrapadB">
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+           <center><Paper >Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper >Devines</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+           <center><Paper >Night Activity</Paper> </center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper >Shooters</Paper></center>
 
         </Grid>
 
         <Grid item xs>
 
-          <Paper className={classes.paper}>Night Activity</Paper>
+          <center><Paper >Night Activity</Paper></center>
           <center><img src={rooftopBar} className="pics" alt=""/>
-          <Paper className={classes.paper}>NightAct Name</Paper></center>
+          <Paper>Mavericks</Paper></center>
         </Grid>
 
       </Grid>
       <br></br>
 
     </div>
+  
 
   );
 
 }
 
-AutoGrid.propTypes = {
-
-  classes: PropTypes.object.isRequired,
-
-};
 
 
-export default withStyles(styles)(AutoGrid);
+}
+export default Results;
