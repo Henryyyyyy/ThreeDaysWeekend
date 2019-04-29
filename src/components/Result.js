@@ -36,10 +36,13 @@ const styles = theme => ({
 
 });
 
+
 var breakfastArray = Gen.generateRest();
+var lunchArray = Gen.generateRest();
+var dinnerArray = Gen.generateRest();
 
 
-var b1a = breakfastArray[0].location;
+var b1a = breakfastArray[0].district;
 var b2 = breakfastArray[1].name;
 var b3 = breakfastArray[2].name;
 
