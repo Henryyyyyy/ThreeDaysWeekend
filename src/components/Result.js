@@ -101,7 +101,16 @@ render(){
             {breakfastArray[0].name}
             </Button>
             <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
           
@@ -121,11 +130,20 @@ render(){
           <Paper >
 
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover2" type="button">
             {breakfastArray[1].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover2" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[1].district}
+              <br />
+              Price: {breakfastArray[1].budget}
+              <br />
+              Style: {breakfastArray[1].styles}
+              <br />
+              Feature: {breakfastArray[1].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -138,11 +156,20 @@ render(){
           <center><img src={breakfast} className="pics" alt=""/> 
           <Paper>
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
+            <Button className= "color button popText" id="Popover3" type="button">
             {breakfastArray[2].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover3" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[2].district}
+              <br />
+              Price: {breakfastArray[2].budget}
+              <br />
+              Style: {breakfastArray[2].styles}
+              <br />
+              Feature: {breakfastArray[2].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -189,11 +216,20 @@ render(){
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover4" type="button">
+            {lunchArray[0].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover4" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -206,11 +242,20 @@ render(){
           <center><img src={lunch} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover5" type="button">
+            {lunchArray[1].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover5" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -223,11 +268,20 @@ render(){
           <center><img src={lunch} className="pics" alt=""/>
           <Paper>
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover6" type="button">
+            {lunchArray[2].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover6" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -273,11 +327,20 @@ render(){
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover7" type="button">
+            {dinnerArray[0].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover7" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -290,11 +353,20 @@ render(){
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover8" type="button">
+            {dinnerArray[1].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover8" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
@@ -307,11 +379,20 @@ render(){
           <center><img src={dinner} className="pics" alt=""/>
           <Paper >
           <div>
-            <Button className= "color button popText" id="Popover1" type="button">
-            {breakfastArray[0].name}
+            <Button className= "color button popText" id="Popover9" type="button">
+            {dinnerArray[2].name}
             </Button>
-            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
-            <PopoverBody> Location: {b1a}</PopoverBody>
+            <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover9" toggle={this.toggle}>
+            <PopoverBody> 
+              Location: {breakfastArray[0].district}
+              <br />
+              Price: {breakfastArray[0].budget}
+              <br />
+              Style: {breakfastArray[0].styles}
+              <br />
+              Feature: {breakfastArray[0].features}
+              <br />
+              </PopoverBody>
             </Popover>
       </div>
             </Paper></center>
